@@ -20,7 +20,7 @@ body {
     gap: 24px;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .card {
@@ -28,7 +28,10 @@ body {
     border-radius: 4px;
     padding: 16px;
     width: 320px;
+    min-height: 380px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
@@ -41,27 +44,30 @@ body {
 
 .card-price {
     font-size: 20px;
-    color: #26251E99;
-    margin-bottom: 24px;
+    color: rgba(38, 37, 30, 0.5);
+    display: inline-flex;
+    align-items: baseline;
 }
 
 .card-price-amount {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(38, 37, 30, 0.5);
 }
 
 .card-price-frequency {
-    font-size: 16px;
+    font-size: 14px;
+    color: rgba(38, 37, 30, 0.5);
 }
 
 .card-content {
-    margin-bottom: 32px;
+    margin-bottom: 0;
 }
 
 .includes-text {
     font-size: 16px;
-    color: #333;
-    margin-bottom: 16px;
+    color: rgba(38, 37, 30, 0.5);
+    margin: 16px 0;
 }
 
 .features-list {
@@ -72,20 +78,21 @@ body {
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #26251E;
 }
 
 .checkmark {
-    color: #4a4a4a;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
+    color: #26251E;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: regular;
 }
 
 .download-button {
     width: fit-content;
+    margin-top: auto;
     background-color: #e6e5e0;
     border: none;
     border-radius: 999px;
